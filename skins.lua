@@ -1,3 +1,16 @@
+local RARITY_COLORS = {
+    ["Common"]      = {Color3.fromRGB(180, 180, 180), Color3.fromRGB(100, 100, 100)},
+    ["Uncommon"]    = {Color3.fromRGB(90, 200, 110),  Color3.fromRGB(30, 110, 50)},
+    ["Rare"]        = {Color3.fromRGB(70, 130, 220),  Color3.fromRGB(20, 60, 160)},
+    ["Epic"]        = {Color3.fromRGB(180, 60, 220),  Color3.fromRGB(90, 20, 130)},
+    ["Legendary"]   = {Color3.fromRGB(240, 180, 30),  Color3.fromRGB(160, 100, 10)},
+    ["Mythical"]    = {Color3.fromRGB(230, 60, 60),   Color3.fromRGB(140, 20, 20)},
+    ["Unique"]      = {Color3.fromRGB(255, 215, 0),   Color3.fromRGB(200, 120, 0)},
+    ["Unobtainable"]= {Color3.fromRGB(50, 50, 50),    Color3.fromRGB(20, 20, 20)},
+}
+local function RC(rarity) return RARITY_COLORS[rarity] or RARITY_COLORS["Common"] end
+
+
 local GUNS_DATABASE = {
     ["Medkit"] = {
         { name = "Medkit",            image = "rbxassetid://17160800734",     colors = RC("Common") },
